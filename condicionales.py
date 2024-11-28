@@ -128,3 +128,41 @@ elif edad <= 18:
     print("Debes pagar 5€")
 else:
     print("Debes pagar 10€")
+
+# Ejercicio 10. La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
+
+# Ingredientes vegetarianos: Pimiento y tofu.
+# Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+
+# Escribe un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
+
+tipo = input("Ingresa 1 para una pizza vegetariana e ingresa 2 para una pizza no vegetariana: ")
+ingredientes_base = "mozzarella, tomate"
+
+if tipo == "1":
+    print("Ingredientes de pizzas vegetarianas:\n1. Pimiento\n2. Tofu")
+    ingrediente = input("Introduce el número del ingrediente que deseas (1 o 2): ")
+    
+    if ingrediente == "1":
+        ingrediente_elegido = "pimiento"
+    elif ingrediente == "2":
+        ingrediente_elegido = "tofu"
+    else:
+        ingrediente_elegido = "opción inválido"
+    
+    print(f"Pizza vegetariana con {ingredientes_base} y {ingrediente_elegido}.")
+    
+elif tipo == "2":
+    print("Ingredientes de pizzas no vegetarianas:\n1. Peperoni\n2. Jamón\n3. Salmón")
+    ingrediente = input("Introduce el número del ingrediente que deseas (1, 2 o 3): ")
+    
+    if ingrediente == "1":
+        ingrediente_elegido = "peperoni"
+    elif ingrediente == "2":
+        ingrediente_elegido = "jamón"
+    elif ingrediente == "3":
+        ingrediente_elegido = "salmón"
+    else:
+        ingrediente_elegido = "opción inválido"
+    
+    print(f"Pizza no vegetariana con {ingredientes_base} y {ingrediente_elegido}.")
