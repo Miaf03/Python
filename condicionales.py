@@ -1,65 +1,65 @@
 
-# Ejercicio 1. Escribe un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no.
+# Escribe un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no.
 
-edad = int(input("Ingresa tu edad: "))
+age = int(input("Enter your age: "))
 
-if edad >= 18:
-    print("Eres mayor de edad")
+if age >= 18:
+    print("You are an adult")
 else:
-    print("Eres menor de edad")
+    print("You are a minor")
 
-# Ejercicio 2. Escribe un programa que almacene la cadena 'contraseña' en una variable, luego pregunte al usuario por la contraseña e imprima por pantalla si la contraseña introducida por el usuario coincide con la guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
+# Escribe un programa que almacene la cadena 'password' en una variable, luego pregunte al usuario por la contraseña e imprima por pantalla si la contraseña introducida por el usuario coincide con la guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
 
-key = "contraseña"
-password = input("Ingresa la contraseña: ")
+key = "password"
+password = input("Enter the password: ")
 
 if key == password.lower():
-    print("Contraseña correcta")
+    print("Correct password")
 else: 
-    print("Contraseña incorrecta")
+    print("Incorrect password")
 
-# Ejercicio 3. Escribe un programa que pida al usuario dos números y muestre por pantalla su división. Si el divisor es cero el programa debe mostrar un error.
+# Escribe un programa que pida al usuario dos números y muestre por pantalla su división. Si el divisor es cero el programa debe mostrar un error.
 
-n = float(input("Ingresa el numerador: "))
-m = float(input("Ingresa el denominador: "))
+n = float(input("Enter the numerator: "))
+m = float(input("Enter the denominator: "))
 
 if m == 0:
-    print("¡error!, no se puede dividir entre cero")
+    print("Error! Division by zero is not allowed")
 else:
-    print(f"El resultado es: {n / m:.2f}")
+    print(f"The result is: {n / m:.2f}")
     
-# Ejercicio 4. Escribe un programa que pida al usuario un número entero y muestre por pantalla si es par o impar.
+# Escribe un programa que pida al usuario un número entero y muestre por pantalla si es par o impar.
 
-numero = int(input("Ingresa un número entero: "))
+number = int(input("Enter an integer: "))
 
-if numero % 2 == 0:
-    print("El número es par")
+if number % 2 == 0:
+    print("The number is even")
 else:
-    print("El número es impar")
+    print("The number is odd")
 
-# Ejercicio 5. Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a 1000 € mensuales. Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no.
+# Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a 1000 € mensuales. Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no.
 
-edad = int(input("Ingresa tu edad: "))
-ingresos = float(input("Agrega tus ingresos mensuales en euros: "))
+age = int(input("Enter your age: "))
+income = float(input("Enter your monthly income in euros: "))
 
-if edad > 16 and ingresos >= 1000:
-    print("Tienes que tributar")
+if age > 16 and income >= 1000:
+    print("You need to pay taxes")
 else: 
-    print("No tienes que tributar")
+    print("You don't need to pay taxes")
 
-# Ejercicio 6. Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al sexo y el nombre. El grupo A esta formado por las mujeres con un nombre anterior a la M y los hombres con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde.
+# Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al sexo y el nombre. El grupo A esta formado por las mujeres con un nombre anterior a la M y los hombres con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde.
 
-nombre = input("Ingresa tu nombre: ")
-genero = input("Ingresa tu sexo: (hombre/mujer): ").lower()
+name = input("Enter your name: ")
+gender = input("Enter your gender: male/female: ").lower()
 
-if genero == "mujer" and nombre[0].upper() < "M":
-    print(f"Perteneces al grupo A")
-elif genero == "hombre" and nombre[0].upper() > "N":
-    print("Perteneces al grupo A")
+if gender == "female" and name[0].upper() < "M":
+    print(f"You belong to group A")
+elif gender == "male" and name[0].upper() > "N":
+    print("You belong to group A")
 else:
-    print("Perteneces al grupo B")
+    print("You belong to group B")
 
-# Ejercicio 7. Los tramos impositivos para la declaración de la renta en un determinado país son los siguientes:
+# Los tramos impositivos para la declaración de la renta en un determinado país son los siguientes:
 
 '''
 | Renta                 | Tipo Impositivo |
@@ -73,22 +73,22 @@ else:
 
 # Escribe un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
 
-renta = float(input("Ingresa tu rental anual en euros: "))
+income = float(input("Enter your annnual rental income in euros: "))
 
-if renta < 10000:
-    tipo = 5
-elif renta <= 20000:
-    tipo = 15
-elif renta <= 35000:
-    tipo = 20
-elif renta <= 60000:
-    tipo = 30
+if income < 10000:
+    tax_rate = 5
+elif income <= 20000:
+    tax_rate = 15
+elif income <= 35000:
+    tax_rate = 20
+elif income <= 60000:
+    tax_rate = 30
 else:
-    tipo = 45
+    tax_rate = 45
 
-print(f"Tu tipo impositivo es del {tipo}%.")
+print(f"Your tax rate is {tax_rate}%.")
 
-# Ejercicio 8. En una determinada empresa, sus empleados son evaluados al final de cada año. Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas. A continuación se muestra una tabla con los niveles correspondientes a cada puntuación. La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada por la puntuación del nivel.
+# En una determinada empresa, sus empleados son evaluados al final de cada año. Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas. A continuación se muestra una tabla con los niveles correspondientes a cada puntuación. La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada por la puntuación del nivel.
 
 '''
 | Nivel       | Puntuación |
@@ -100,36 +100,36 @@ print(f"Tu tipo impositivo es del {tipo}%.")
 
 # Escribe un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 
-puntuacion = float(input("Ingrese su puntuación: "))
+score = float(input("Enter your score: "))
 
-if puntuacion == 0.0:
-    nivel = "Inaceptable"
-elif puntuacion == 0.4:
-    nivel = "Aceptable"
-elif puntuacion >= 0.6:
-    nivel = "Meritorio"
+if score == 0.0:
+    level = "Unacceptable"
+elif score == 0.4:
+    level = "Acceptable"
+elif score >= 0.6:
+    level = "Meritorious"
 else:
-    nivel = None 
+    level = None 
 
-if nivel:
-    dinero = 2400 * puntuacion
-    print(f"Nivel de rendimiento: {nivel}")
-    print(f"Dinero que recibirá: {dinero:.2f}€")
+if level:
+    money = 2400 * score
+    print(f"Performance level: {level}")
+    print(f"Money you will receive: {money:.2f}€")
 else:
-    print("Puntuación no válida. Por favor, ingrese 0.0, 0.4, o 0.6 o más.")
+    print("Invalid score. Please enter 0.0, 0.4, or 0.6 or higher.")
 
-# Ejercicio 9. Escribe un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€.
+# Escribe un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€.
 
-edad = int(input("Ingresa tu edad: "))
+age = int(input("Enter your age: "))
 
-if edad < 4:
-    print("Puedes entrar gratis")
-elif edad <= 18:
-    print("Debes pagar 5€")
+if age < 4:
+    print("You can enter for free")
+elif age <= 18:
+    print("You must pay 5€")
 else:
-    print("Debes pagar 10€")
+    print("You must pay 10€")
 
-# Ejercicio 10. La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
+# La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
 
 # Ingredientes vegetarianos: Pimiento y tofu.
 # Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
