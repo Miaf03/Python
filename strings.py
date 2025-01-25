@@ -1,73 +1,57 @@
+# Escribe un programa que pregunte el nombre del usuario y un número entero e imprima por pantalla en líneas distintas el nombre del usuario tantas veces como el número introducido (end="" argumento de la función print() que controla como termina la salida)
 
-# Escribe un programa que pregunte el nombre del usuario y un entero e imprima por pantalla en líneas distintas el nombre del usuario tantas veces como el número introducido.
-
-name = input("Enter your name: ")
-integer = int(input("Enter an integer: "))
+name = input("Ingresa tu nombre: ")
+integer = int(input("Ingresa un número entero: "))
 
 print((name + "\n") * (integer), end="")
 
-'''end="" Es un argumento de la función print() que controla como termina la salida'''
+# Escribe un programa que pregunte el nombre completo del usuario y lo muestre por pantalla una con todas las letras en minúsculas, otra con todas las letras en mayúsculas y otra con la primera letra del nombre y de los apellidos en mayúscula
 
-# Escribe un programa que pregunte el nombre completo del usuario y lo muestre por pantalla tres veces, una con todas las letras minúsculas, otra con todas las letras mayúsculas y otra solo con la primera letra del nombre y de los apellidos en mayúscula.
-
-name = input("Enter your full name: ")
+name = input("Ingresa tu nombre completo: ")
 
 print(name.lower())
 print(name.upper())
 print(name.title())
 
-# Escribe un programa que pregunte el nombre del usuario y después muestre por pantalla "<NAME> tiene <n> letras" donde <NAME> es el nombre de usuario en mayúsculas y <n> es el número de letras que tiene el nombre.
+# Escribe un programa que pregunte el nombre del usuario y después muestre por pantalla "<NAME> tiene <n> letras" donde <NAME> es el nombre de usuario en mayúsculas y <n> es el número de letras que tiene el nombre
 
 name = input("Enter your name: ")
-n = len(name.replace(" ", "")) # Elimina espacios antes de contar
+n = len(name.replace(" ", ""))
+
 print(f"{name.upper()} has {n} letters")
 
-# Los teléfonos de una empresa tienen el siguiente formato 'prefijo-número-extension' donde el prefijo es el código del país '+34', y la extensión tiene dos dígitos (por ejemplo +34-913724710-56). Escribe un programa que pregunte por un número de télefono con este formato y muestre por pantalla el número de teléfono sin el prefijo y la extensión.
+# Los teléfonos de una empresa tienen el siguiente formato: prefijo-número-extension. El prefijo es el código del país y la extensión tiene 2 dígitos (ejemplo: +52-7773189654-90). Escribe un programa que pregunte por un número de télefono con este formato y muestre por pantalla el número de teléfono sin el prefijo y la extensión
 
-tel = input("Enter a phone number in the format +xx-number-extension: ")
-parts = tel.split('-')
+number = input("Ingresa un número de teléfono con el siguiente formato, prefijo-número-extensión ejemplo: +52-7772842849-41: ")
+numero = number.split("-")
 
-print(f"The phone number without the prefix or extension is: {parts[1]}")
+print(f"Número sin prefijo y extensión: {numero[1]}")
 
-'''
-Cuando usamos split('-'), estamos dividiendo el número en tres partes, el guion (-) lo usamos como separador. La parte del número (sin prefijo ni extensión) está en el índice 1 de la lista.
-'''
+# Escribe un programa que pida al usuario una frase y muestre por pantalla la frase invertida
 
-# Escribe un programa que pida al usuario que introduzca una frase en la consola y muestre por pantalla la frase invertida.
+frase = input("Ingresa una frase: ")
+print(f"Frase invertida: {frase[::-1]}")
 
-phrase = input("Enter a phrase: ")
-print(f"The reversed phrase is: {phrase[::-1]}")
+# Escribe un programa que pida al usuario una frase y una vocal, después muestre por pantalla la misma frase pero con la vocal introducida en mayúscula
 
-# Escribe un programa que pida al usuario que introduzca una frase en la consola y una vocal, después muestre por pantalla la misma frase pero con la vocal introducida en mayúscula.
+frase = input("Ingresa una frase: ")
+vocal = input("Ingresa una vocal: ")
 
-phrase = input("Enter a phrase: ")
-vowel = input("Enter a vowel: ")
+print(frase.replace(vocal, vocal.upper()))
 
-print(phrase.replace(vowel, vowel.upper()))
+# Escribe un programa que pregunte el email del usuario y muestre otro email con el mismo nombre pero con dominio 'ceu.es' 
 
-# Escribe un programa que pregunte el correo electrónico del usuario en la consola y muestre por pantalla otro correo electrónico con el mismo nombre (la parte delante de la arroba @) pero con dominio 'ceu.es'. 
+email = input("Ingresa tu email: ")
+correo = email.split("@")
 
-email = input("Enter your email: ")
-parts = email.split("@")
+print(f"Tu correo es: {correo[0]}@ceu.es")
 
-print(f"{parts[0]}@ceu.es")
+# Escribe un programa que pregunte al usuario su fecha de nacimiento en formato dd/mm/yyyy, adaptar el programa para que funcione cuando el día o mes se introduce con un solo carácter (Método zfill(n) si el string es más corto que 'n' agrega ceros al principio hasta que su logitud sea de n caracteres)
 
-# Escribe un programa que pregunte al usuario la fecha de su nacimiento en formato dd/mm/yyyy y muestre por pantalla, el día, el mes y el año. Adaptar el programa anterior para que también funcione cuando el día o el mes se introduzcan con un solo carácter.
+fecha = input("Ingresa tu fecha de nacimiento en formato: dd/mm/aaaa: ")
+dia, mes, año = fecha.split("/")
 
-date = input("Enter your birthdate in the format dd/mm/yyyy: ")
-day, month, year = date.split('/')
-day = day.zfill(2)
-month = month.zfill(2)
-  
-print(f"Day: {day}")
-print(f"Month: {month}")
-print(f"Year: {year}")
+dia = dia.zfill(2)
+mes = mes.zfill(2)
 
-'''Método zfill(n) si el string es más corto que 'n' agrega ceros al principio hasta que su logitud sea de n caracteres'''
-
-# Escribe un programa que pregunte por consola por los productos de una cesta, separados por comas, y muestre por pantalla cada uno de los productos en una línea distinta.
-
-products = input("Enter the products in the basket separated by commas: ")
-basket = products.split(',')
-
-print("\n".join(basket))
+print(f"Día: {dia}\nMes: {mes}\nAño: {año}")
