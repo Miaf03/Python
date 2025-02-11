@@ -1,3 +1,10 @@
+# Usa un bucle for para imprimir cada carácter de la cadena "Python" en una línea separada
+
+cadena = "Python"
+
+for letra in cadena:
+    print(letra)
+
 # Escribe un programa que almacene las asignaturas: Matemáticas, Física, Química e Historia en una lista y muestre por pantalla el mensaje 'Yo estudio <asignatura>' donde <asignatura> es cada una de las asignaturas de la lista
 
 asignaturas = ["Matemáticas", "Física", "Química", "Historia"]
@@ -50,3 +57,48 @@ for numero in range(1, 101):
         print("Buzz")
     else:
         print(numero)
+        
+# Pide al usuario un número (como cadena) y suma todos sus dígitos
+
+cadena = input("Ingresa un número: ")
+contador = 0
+
+for digito in cadena:
+    contador += int(digito)
+
+print(f"La suma de los digitos es: {contador}")
+
+
+# Genera una lista con todos los números primos entre 1 y 100
+
+primos = []
+
+for num in range(2, 101):
+    es_primo = True
+    
+    for i in range(2, num):
+        if num % i == 0:
+            es_primo = False
+            break
+    if es_primo:
+        primos.append(num)
+        
+print(f"Numeros primos entre 1 y 100: {primos}")
+
+# Imprime la tabla de multiplicar (del 1 al 10) de un número ingresado por el usuario
+
+n = int(input("Ingresa un número: "))
+
+for tabla in range(1, 11):
+    print(f"{n} x {tabla} = {n * tabla}")
+    
+# Dada la lista [1, 2, 3, 2, 4, 5, 1, 6], elimina los duplicados y muestra la lista resultante
+
+lista = [1, 2, 3, 2, 4, 5, 1, 6]
+sin_duplicados = []
+
+for numero in lista:
+    if numero not in sin_duplicados:
+        sin_duplicados.append(numero)
+
+print(f'Lista sin duplicados: {sin_duplicados}')

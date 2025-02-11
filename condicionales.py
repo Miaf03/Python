@@ -7,16 +7,6 @@ if edad >= 18:
 else:
     print("Eres menor de edad")
 
-# Escribe un programa que almacene la cadena 'password' en una variable, pregunte al usuario por la contraseña e imprima si la contraseña introducida por el usuario coincide con la guardada en la variable sin tener en cuenta mayúsculas y minúsculas
-
-key = "password"
-contraseña = input("Ingresa la contraseña: ")
-
-if key == contraseña.lower():
-    print("Contraseña correcta")
-else: 
-    print("Contraseña incorrecta")
-
 # Escribe un programa que pida al usuario dos números y muestre por pantalla su división. Si el divisor es cero el programa debe mostrar un error
 
 n = float(input("Ingresa el númerador: "))
@@ -45,6 +35,16 @@ if edad > 16 and ingresos >= 1000:
     print("Tienes que pagar impuestos")
 else: 
     print("No debes pagar impuestos")
+    
+# Pide al usuario un número y verifica si ese número está en la lista [2, 4, 6, 8, 10]
+
+numero = int(input("Ingresa un número: "))
+lista = [2, 4, 6, 8, 10]
+    
+if numero in lista:
+    print(f"{numero} esta dentro de la lista {lista}")
+else: 
+    print(f"{numero} no esta dentro de la lista {lista}")    
 
 # Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al sexo y el nombre. El grupo A esta formado por las mujeres con un nombre anterior a la M y los hombres con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde
 
@@ -106,3 +106,27 @@ elif tipo == "2":
         ingrediente_elegido = "opción inválido"
     
     print(f"Pizza no vegetariana con {ingredientes_base} y {ingrediente_elegido}.")
+    
+    
+# Pide al usuario una palabra y verifica si es un palíndromo (se lee igual de adelante hacia atrás)
+    
+palabra = input("Ingresa una palabra: ").replace(" ", "").lower()
+
+if palabra.isalpha():
+    if palabra == palabra[::-1]:
+        print(f"{palabra} es un palíndromo")
+    else:
+        print("No es un palíndromo")
+else:
+    print("Por favor, ingresa solo letras")
+    
+# Pide al usuario una letra y muestra el índice de su primera aparición en el texto "Python es genial"
+
+letra = input("Ingresa una letra: ")
+texto = "Python es genial"
+
+if letra in texto:
+    aparicion = texto.index(letra)
+    print(f'Indice de la primera aparición de la letra "{letra}" en "{texto}": {aparicion}')
+else: 
+    print(f'La letra "{letra}" no se encuentra en el texto: "{texto}"')
