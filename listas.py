@@ -46,3 +46,14 @@ for elemento in lista:
     contador += 1
 
 print(f"La cantidad de elementos en la lista es: {contador}")
+
+# Crea una lista de números y usa un bucle para imprimir solo los números mayores a 10.
+
+lista = [2, 4, 38, 19, 36, 2, 37]
+mayor_a_10 = []
+
+for numero in lista:
+    if numero > 10:
+        mayor_a_10.append(numero)
+    
+print(mayor_a_10)
