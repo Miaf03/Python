@@ -1,3 +1,26 @@
+
+# Imprime los números del 1 al 10 usando un bucle for
+
+for numero in range(1, 11):
+    print(numero)
+    
+# Imprime los números pares del 1 al 20
+
+for numero in range(2, 21, 2):
+    print(numero)
+    
+# Pide al usuario que ingrese una palabra y cuenta cuántas vocales tiene
+
+palabra = input("Ingresa una palabra: ")
+contador = 0
+
+for letra in palabra:
+    
+    if letra in "aeiouAEIOU":
+        contador += 1
+        
+print(f"Hay {contador} vocales en '{palabra}'")
+
 # Usa un bucle for para imprimir cada carácter de la cadena "Python" en una línea separada
 
 cadena = "Python"
@@ -12,7 +35,7 @@ asignaturas = ["Matemáticas", "Física", "Química", "Historia"]
 for asignatura in asignaturas:
     print(f"Yo estudio {asignatura}")
 
-# Escribe un programa que pregunte por los productos de una cesta, separados por comas y muestre por pantalla cada uno de los productos en una línea distinta. (strip() elimina los espacios extra de al principio y al final del elemento)
+# Escribe un programa que pregunte por los productos de una cesta, separados por comas y muestre por pantalla cada uno de los productos en una línea distinta. "strip() elimina los espacios extra de al principio y al final del elemento"
 
 productos = input("Ingresa el nombre de los productos de la cesta separados por comas: ")
 cesta = productos.split(",")
@@ -102,3 +125,22 @@ for numero in lista:
         sin_duplicados.append(numero)
 
 print(f'Lista sin duplicados: {sin_duplicados}')
+
+# Crea una lista con 5 nombres y usa un bucle for para imprimir cada uno. Agrega un nombre más a la lista y vuelve a imprimirla. Usa un condicional dentro del bucle para imprimir solo los nombres que tengan más de 5 letras.
+
+lista = ["Memo", "Lalo", "Mia", "Lulu", "Miguel"]
+
+print("\nLista de nombres:\n")
+for nombre in lista:
+    print(nombre)
+
+lista.append("Andrea")
+
+print("\nLista de nombres actualizada:\n")
+for nombre in lista:
+    print(nombre)
+    
+print("\nNombres con más de 5 letras:\n")
+for nombre in lista:
+    if len(nombre) > 5:
+        print(nombre)

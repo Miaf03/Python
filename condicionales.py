@@ -1,4 +1,4 @@
-# Escribe un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no
+# Escribe un programa que pregunte al usuario su edad y muestre por pantalla si es mayor o menor de edad
 
 edad = int(input("Ingresa tu edad: "))
 
@@ -7,7 +7,7 @@ if edad >= 18:
 else:
     print("Eres menor de edad")
 
-# Escribe un programa que pida al usuario dos números y muestre por pantalla su división. Si el divisor es cero el programa debe mostrar un error
+# Escribe un programa que pida al usuario dos números y muestre por pantalla su división si el divisor es cero el programa debe mostrar un error
 
 n = float(input("Ingresa el númerador: "))
 m = float(input("Ingresa el denominador: "))
@@ -17,16 +17,16 @@ if m == 0:
 else:
     print(f"El resultado es: {n / m:.2f}")
     
-# Escribe un programa que pida al usuario un número entero y muestre por pantalla si es par o impar
+# Escribe un programa que pida al usuario un número y muestre si es par o impar
 
-numero = int(input("Ingresa un número entero: "))
+numero = int(input("Ingresa un número: "))
 
 if numero % 2 == 0:
     print("El número es par")
 else:
     print("El número es impar")
 
-# Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a 1000 pesos mensuales. Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no
+# Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a $1000 pesos MXN mensuales. Escribe un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre si el usuario tiene que tributar o no
 
 edad = int(input("Ingresa tu edad: "))
 ingresos = float(input("Ingresos mensuales: "))
@@ -46,7 +46,7 @@ if numero in lista:
 else: 
     print(f"{numero} no esta dentro de la lista {lista}")    
 
-# Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al sexo y el nombre. El grupo A esta formado por las mujeres con un nombre anterior a la M y los hombres con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde
+# Los alumnos de un curso se han dividido en dos grupos. A y B de acuerdo al sexo y el nombre. El grupo A esta formado por las mujeres con un nombre anterior a la M y los hombres con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde
 
 nombre = input("Ingresa tu nombre: ")
 genero = input("Ingresa tu género: hombre/mujer: ").lower()
@@ -58,25 +58,14 @@ elif genero == "hombre" and nombre[0].upper() > "N":
 else:
     print("Perteneces al grupo B")
 
-# Escribe un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años 10€
-
-edad = int(input("Ingresa tu edad: "))
-
-if edad < 4:
-    print("Puedes entrar gratis")
-elif edad <= 18:
-    print("Debes pagar 5€")
-else:
-    print("Debes pagar 10€")
-
-# La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación
+# La pizzería Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación:
 
 # Ingredientes vegetarianos: Pimiento y tofu
 # Ingredientes no vegetarianos: Peperoni, Jamón y Salmón
 
-# Escribe un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva
+# Escribe un programa que pregunte al usuario si quiere una pizza vegetariana o no y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva
 
-tipo = input("Ingresa 1 para una pizza vegetariana e ingresa 2 para una pizza no vegetariana: ")
+tipo = input("Ingresa 1 para una pizza vegetariana o ingresa 2 para una pizza no vegetariana: ")
 ingredientes_base = "mozzarella, tomate"
 
 if tipo == "1":
@@ -130,3 +119,43 @@ if letra in texto:
     print(f'Indice de la primera aparición de la letra "{letra}" en "{texto}": {aparicion}')
 else: 
     print(f'La letra "{letra}" no se encuentra en el texto: "{texto}"')
+    
+
+# Calculadora: Crea un programa que solicite dos números al usuario y permita realizar operaciones de suma, resta, multiplicación y división     
+
+a = float(input("Ingresa un número: "))
+b = float(input("Ingresa otro número: "))
+
+if a == int(a):
+    resultado_a = f"{int(a)}"
+else:
+    resultado_a = f"{a:.2f}"
+
+if b == int(b):
+    resultado_b = f"{int(b)}"
+else:
+    resultado_b = f"{b:.2f}"
+
+operacion = input("\n¿Qué operación deseas realizar ingresa:\n\n(+) para sumar\n(-) para restar\n(*) para multiplicar\n(/) para dividir:\n\n")
+
+if operacion == "+":
+    resultado = a + b
+elif operacion == "-":
+    resultado = a - b
+elif operacion == "*":
+    resultado = a * b
+elif operacion == "/":
+    if b != 0:
+        resultado = a / b
+    else: 
+        print("¡Error! No se puede dividir por 0")
+else:
+    print("¡Error! Ingresa uno de los siguiente operadores: +, -, *, /")
+    exit()
+    
+if resultado == int(resultado):
+    resultado = int(resultado)
+else:
+    resultado = f"{resultado:.2f}"
+    
+print(f"El resultado de {resultado_a} {operacion} {resultado_b} es {resultado}")

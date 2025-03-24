@@ -19,6 +19,13 @@ coste = float(input("Ingresa el coste por hora: "))
 
 print(f"Te corresponde una paga de: ${horas * coste:.2f} pesos")
 
+# Pide al usuario su edad y calcula cuántos días ha vivido (aproximadamente)
+
+edad = int(input("Ingresa tu edad: "))
+vida = edad * 365
+
+print(f"Tienes {edad} años, has vivido {vida} días")
+
 # Escribe un programa que lea un número entero positivo 'n' introducido por el usuario y muestre la suma de todos los enteros desde 1 hasta 'n'
 
 n = int(input("Ingresa un número entero: "))
