@@ -4,11 +4,6 @@
 for numero in range(1, 11):
     print(numero)
     
-# Imprime los números pares del 1 al 20
-
-for numero in range(2, 21, 2):
-    print(numero)
-    
 # Pide al usuario que ingrese una palabra y cuenta cuántas vocales tiene
 
 palabra = input("Ingresa una palabra: ")
@@ -20,20 +15,6 @@ for letra in palabra:
         contador += 1
         
 print(f"Hay {contador} vocales en '{palabra}'")
-
-# Usa un bucle for para imprimir cada carácter de la cadena "Python" en una línea separada
-
-cadena = "Python"
-
-for letra in cadena:
-    print(letra)
-
-# Escribe un programa que almacene las asignaturas: Matemáticas, Física, Química e Historia en una lista y muestre por pantalla el mensaje 'Yo estudio <asignatura>' donde <asignatura> es cada una de las asignaturas de la lista
-
-asignaturas = ["Matemáticas", "Física", "Química", "Historia"]
-
-for asignatura in asignaturas:
-    print(f"Yo estudio {asignatura}")
 
 # Escribe un programa que pregunte por los productos de una cesta, separados por comas y muestre por pantalla cada uno de los productos en una línea distinta. "strip() elimina los espacios extra de al principio y al final del elemento"
 
